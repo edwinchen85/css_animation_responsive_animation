@@ -2,11 +2,11 @@
 .animation-example {
   background: #fff;
   border: 2px dotted #aaa;
-  height: 32em;
-    left: calc(50% - 16em);
+  height: 90%;
+    left: 5%;
   position: absolute;
-    top: calc(50% - 16em);
-  width: 32em;
+    top: 5%;
+  width: 90%;
 }
 
 .large-shapes {
