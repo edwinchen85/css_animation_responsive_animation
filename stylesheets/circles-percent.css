@@ -2,7 +2,6 @@
 .animation-example {
   background: #fff;
   border: 2px dotted #aaa;
-  font-size: 8px; /* Sizing for mobile first */
   height: 32em;
     left: calc(50% - 16em);
   position: absolute;
@@ -14,18 +13,26 @@
   -webkit-animation: spin 10s linear infinite;
           animation: spin 10s linear infinite;
   display: block;
+  height: 100%;
     left: 50%;
   position: absolute;
     top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .small-shapes {
   -webkit-animation: spin 20s linear infinite;
           animation: spin 20s linear infinite;
   display: block;
+  height: 100%;
     left: 50%;
   position: absolute;
     top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .middle-circle {
@@ -33,88 +40,54 @@
   border: 1px solid #333;
   border-radius: 50%;
   box-shadow: 0 0 4em rgba(0,0,0,.8), 0 0 2em rgba(0,0,0,.8) inset;
-  height: 4em;
-    left: calc(50% - 2em);
+  height: 12%;
+    left: calc(50% - 6%);
   position: absolute;
-    top: calc(50% - 2em);
-  width: 4em;
+    top: calc(50% - 6%);
+  width: 12%;
 }
-
-/* Put media queries for larger sizes here */
-@media (min-width: 350px) {
-  .animation-example {
-    font-size: 10px;
-  }
-}
-
-@media (min-width: 410px) {
-  .animation-example {
-    font-size: 11px;
-  }
-}
-
-@media (min-width: 700px) {
-  .animation-example {
-    font-size: 22px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .animation-example {
-    font-size: 29px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .animation-example {
-    font-size: 38px;
-  }
-}
-
 
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotateZ(0);
-            transform: rotateZ(0);
+    -webkit-transform: translate(-50%, -50%) rotateZ(0);
+            transform: translate(-50%, -50%) rotateZ(0);
   }
   50% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
+    -webkit-transform: translate(-50%, -50%) rotateZ(180deg);
+            transform: translate(-50%, -50%) rotateZ(180deg);
   }
   100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+    -webkit-transform: translate(-50%, -50%) rotateZ(360deg);
+            transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
 
-
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotateZ(0);
-            transform: rotateZ(0);
+    -webkit-transform: translate(-50%, -50%) rotateZ(0);
+            transform: translate(-50%, -50%) rotateZ(0);
   }
   50% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
+    -webkit-transform: translate(-50%, -50%) rotateZ(180deg);
+            transform: translate(-50%, -50%) rotateZ(180deg);
   }
   100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+    -webkit-transform: translate(-50%, -50%) rotateZ(360deg);
+            transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
 
 .circle, .square {
   background-color: grey;
   border-top: 0.1em solid rgba(255,255,255,0.4);
-  height: 12.5em;
+  height: 35%;
   position: absolute;
-  width: 12.5em;
+  width: 35%;
 }
 
 .circle.small, .square.small {
-  height: 4em;
-  width: 4em;
+  height: 12%;
+  width: 12%;
 }
 
 .circle {
@@ -123,17 +96,17 @@
 }
 
 .circle.large {
-  left: calc(50% - 6.25em);
-  top: calc(50% - 12.5em);
-  -webkit-transform-origin: 50% 12.5em;
-          transform-origin: 50% 12.5em;
+  left: 32.5%;
+  top: 15%;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
 }
 
 .circle.small {
-  left: calc(50% - 2em);
-  top: calc(50% - 15em);
-  -webkit-transform-origin: 50% 15em;
-          transform-origin: 50% 15em;
+  left: 42%;
+  top: 8%;
+  -webkit-transform-origin: 50% 350%;
+          transform-origin: 50% 350%;
 }
 
 .circle.one {
@@ -191,15 +164,13 @@
 .square.large {
   background: rgba(30, 7, 66, 0.65);
   border: none;
-  height: 15em;
-  left: calc(50% - 7.5em);
-  top: calc(50% - 7.5em);
+  height: 60%;
   -webkit-transform: none;
           transform: none;
-  width: 15em;
+  width: 60%;
 }
 
-.square.one {
+.square.large.one {
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
@@ -207,21 +178,21 @@
 .square.small {
   background: none;
   border: none;
-  left: calc(50% - 2em);
-  top: calc(50% - 15em);
-  -webkit-transform-origin: 50% 15em;
-          transform-origin: 50% 15em;
+  left: 42%;
+  top: 8%;
+  -webkit-transform-origin: 50% 350%;
+          transform-origin: 50% 350%;
 }
 
 .square.small:after {
   border-radius: 25%;
   box-shadow: -.5em .5em 2em rgba(0,0,0,0.5);
   content: '';
-  height: 4em;
+  height: 100%;
   position: absolute;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  width: 4em;
+  width: 100%;
 }
 
 .square.small.two {
