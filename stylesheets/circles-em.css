@@ -59,6 +59,12 @@
   }
 }
 
+@media (min-width: 1000px) {
+  .animation-example {
+    font-size: 29px;
+  }
+}
+
 
 @-webkit-keyframes spin {
   0% {
