@@ -41,7 +41,11 @@
 }
 
 /* Put media queries for larger sizes here */
-
+@media (min-width: 350px) {
+  .animation-example {
+    font-size: 10px;
+  }
+}
 
 
 @-webkit-keyframes spin {
@@ -155,7 +159,7 @@
   -webkit-transform: rotateZ(-90deg);
           transform: rotateZ(-90deg)
 }
-  
+
 .square {
   border-radius: 25%;
 }
@@ -175,7 +179,7 @@
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-  
+
 .square.small {
   background: none;
   border: none;
