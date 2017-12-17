@@ -2,11 +2,11 @@
 .animation-example {
   background: #fff;
   border: 2px dotted #aaa;
-  height: 90%;
-    left: 5%;
+  height: 95vmin;
+    left: calc(50% - 47.5vmin);
   position: absolute;
-    top: 5%;
-  width: 90%;
+    top: calc(50% - 47.5vmin);
+  width: 95vmin;
 }
 
 .large-shapes {
@@ -39,7 +39,7 @@
   background: #eee;
   border: 1px solid #333;
   border-radius: 50%;
-  box-shadow: 0 0 4em rgba(0,0,0,.8), 0 0 2em rgba(0,0,0,.8) inset;
+  box-shadow: 0 0 4vmin rgba(0,0,0,.8), 0 0 2vmin rgba(0,0,0,.8) inset;
   height: 12%;
     left: calc(50% - 6%);
   position: absolute;
@@ -92,7 +92,7 @@
 
 .circle {
   border-radius: 50%;
-  box-shadow: 0 1em 2em rgba(0,0,0,0.5);
+  box-shadow: 0 2vmin 3vmin rgba(0,0,0,0.5);
 }
 
 .circle.large {
